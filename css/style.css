@@ -303,8 +303,6 @@ h6 {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 0 5px;
-  position: relative;
-  z-index: 6;
 }
 
 .fullscreen__hive {
@@ -2217,6 +2215,8 @@ body.lock {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: relative;
+    z-index: 6;
   }
 
   .fullscreen__hive {
