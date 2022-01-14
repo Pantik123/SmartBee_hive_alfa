@@ -270,6 +270,29 @@ window.onload = function() {
     }
 }
 
+// ================= Кнопка вверх ===================
+// Даємо вікну подію скрол
+window.addEventListener("scroll", (e) => {
+    // Перевіряємо чи проскролили сторінку більше ніж на 300px
+    if (window.scrollY > 300) {
+        upButton.classList.add("active");
+    } else if (window.scrollY < 300) {
+        upButton.classList.remove("active");
+    }
+
+    // Даємо кнопці подію клік
+    upButton.addEventListener("click", (e) => {
+        window.scrollTo({
+            // Вказуємо верх сторінки
+            top: 0,
+            // Задаємо плавну прокрутку
+            behavior: "smooth"
+          });
+        // Забороняємо переходити посиланню
+        e.preventDefault();
+    });
+});
+
 // =================== Слайдер ====================
 // ініціалізуємо слайдер Swiper
 let swiper = new Swiper(".slider__swiper", {
