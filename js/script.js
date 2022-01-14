@@ -18,6 +18,15 @@ testWebP(function (support) {
     }
 });
 
+// Завантажуємо при можливості зображення webp
+if (body.classList.contains('webp')) {
+    document.querySelector('.parallax__big-grass').backgroundImage = "url('../img/parallax/big_grass.webp')";
+    document.querySelector('.parallax__small-grass').backgroundImage = "url('../img/parallax/small_grass.webp')";
+} else if (body.classList.contains('no-webp')) {
+    document.querySelector('.parallax__big-grass').backgroundImage = "url('../img/parallax/big_grass.png')";
+    document.querySelector('.parallax__small-grass').backgroundImage = "url('../img/parallax/small_grass.png')";
+}
+
 // =================== Хедер ====================
 // Отримуємо всі об’єкти для анімації
 const animItems = document.querySelectorAll('.-anim-items');
