@@ -1871,7 +1871,7 @@ body.lock {
 }
 
 .up-button.active {
-  opacity: 1;
+  opacity: 0.7;
   visibility: visible;
 }
 
@@ -1951,6 +1951,7 @@ body.lock {
   }
 }
 
+/* Media запити */
 @media (min-width: 767px) {
   .menu__list {
     --underline-width: 0;
@@ -1996,7 +1997,6 @@ body.lock {
   }
 }
 
-/* Media запити */
 @media (max-width: 1240px) {
   .using__decor::before {
     right: -75%;
@@ -2317,7 +2317,7 @@ body.lock {
 
   .menu__list > li {
     position: relative;
-    margin: 0 0 20px 0px;
+    margin: 0 0 0px 0px;
   }
 
   .menu__list > li > a {
@@ -2391,7 +2391,7 @@ body.lock {
 
   .fullscreen__sub-title {
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: center;
   }
 
